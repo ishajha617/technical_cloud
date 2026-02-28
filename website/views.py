@@ -11,13 +11,13 @@ def course_list(request):
     return render(request, 'course_list.html', {'courses': courses})
 
 
-def course_detail(request, id):
-    course = get_object_or_404(Course, id=id)
+def course_detail(request, course_id):
+    course = get_object_or_404(Course, id=course_id)
     return render(request, 'course_detail.html', {'course': course})
 
 
-def enroll(request, id):
-    course = get_object_or_404(Course, id=id)
+def enroll(request, course_id):
+    course = get_object_or_404(Course, id=course_id)
 
     if request.method == "POST":
         Enrollment.objects.create(

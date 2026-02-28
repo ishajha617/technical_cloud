@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Technical Cloud Knowledge{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<div style="text-align:center; padding:60px 20px; background:linear-gradient(to right, #021736, #1b0242); color:white; border-radius:10px;">
+    
+    <h1 style="font-size:40px; margin-bottom:20px;">
+        Best DevOps & Cloud Training Institute
+    </h1>
+
+    <p style="font-size:20px;">
+        Founder: Sanjay Dahiya
+    </p>
+
+    <p style="font-size:18px; margin-top:10px;">
+        Learn Linux, AWS, Azure, Docker, Kubernetes, Terraform & More
+    </p>
+
+    <br>
+
+    <a href="{% url 'course_list' %}"
+       style="padding:12px 25px; background:white; color:#021736; text-decoration:none; font-weight:bold; border-radius:5px;">
+        View All Courses
+    </a>
+
+</div>
+
+
+<!-- About Section -->
+<div style="margin-top:60px; text-align:center;">
+    
+    <h2>About Technical Cloud Knowledge</h2>
+
+    <p style="max-width:800px; margin:20px auto; font-size:16px;">
+        Technical Cloud Knowledge PVT. LTD is a leading IT training institute
+        providing real-time practical training in DevOps, Cloud Computing,
+        and Infrastructure Automation.
+    </p>
+
+    <p style="max-width:800px; margin:20px auto; font-size:16px;">
+        Our mission is to make students industry-ready with live projects,
+        interview preparation, and real production-level training.
+    </p>
+
+</div>
+
+
+<!-- Highlights Section -->
+<div style="margin-top:60px; text-align:center;">
+    
+    <h2>Why Choose Us?</h2>
+
+    <div style="display:flex; justify-content:center; flex-wrap:wrap; margin-top:30px; gap:30px;">
+        
+        <div style="width:250px; padding:20px; border:1px solid #ddd; border-radius:10px;">
+            <h4>Live Projects</h4>
+            <p>Work on real-time DevOps & Cloud projects.</p>
+        </div>
+
+        <div style="width:250px; padding:20px; border:1px solid #ddd; border-radius:10px;">
+            <h4>Interview Preparation</h4>
+            <p>Top interview questions & resume guidance.</p>
+        </div>
+
+        <div style="width:250px; padding:20px; border:1px solid #ddd; border-radius:10px;">
+            <h4>Expert Trainers</h4>
+            <p>Training by industry experts with real experience.</p>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- Contact Section -->
+<div style="margin-top:60px; padding:40px; background:#f8f9fa; border-radius:10px; text-align:center;">
+    
+    <h2>Contact Information</h2>
+
+    <p><strong>Founder:</strong> Sanjay Dahiya</p>
+    <p><strong>Phone:</strong> +91 8817442344</p>
+    <p><strong>Email:</strong> sanjay.dahiya332@gmail.com</p>
+
+    <br>
+
+    <a href="https://wa.me/918817442344?text=Hello%20I%20am%20interested%20in%20your%20courses"
+       target="_blank"
+       style="padding:10px 20px; background:#25D366; color:white; text-decoration:none; border-radius:5px;">
+        Chat on WhatsApp
+    </a>
+
+</div>
+
+{% endblock %}

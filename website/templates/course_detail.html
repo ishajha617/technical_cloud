@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ course.name }} - Technical Cloud Knowledge{% endblock %}
+
+{% block content %}
+
+<div style="max-width:900px; margin:auto;">
+
+    <!-- Course Title -->
+    <h2 style="text-align:center; margin-bottom:30px;">
+        {{ course.name }}
+    </h2>
+
+    <!-- Course Image -->
+    {% if course.image %}
+        <div style="text-align:center;">
+            <img src="{{ course.image.url }}" 
+                 alt="{{ course.name }}"
+                 style="width:100%; max-height:400px; object-fit:cover; border-radius:10px;">
+        </div>
+    {% endif %}
+
+    <!-- Course Description -->
+    <div style="margin-top:30px; font-size:16px; line-height:1.6;">
+        <p>{{ course.description }}</p>
+    </div>
+
+    <!-- Price Section -->
+    <div style="margin-top:30px; font-size:20px;">
+        <strong>Course Price:</strong> ₹{{ course.price }}
+    </div>
+
+    <!-- Buttons Section -->
+    <div style="margin-top:30px;">
+
+        <!-- Enroll Button -->
+        <a href="{% url 'enroll' course.id %}">
+            <button style="padding:10px 20px; background:#021738; color:white; border:none; border-radius:5px;">
+                Enroll Now
+            </button>
+        </a>
+
+        <!-- WhatsApp Button -->
+        <a href="https://wa.me/918817442344?text=Hello%20I%20am%20interested%20in%20{{ course.name }}"
+           target="_blank">
+            <button style="padding:10px 20px; background:#25D366; color:white; border:none; border-radius:5px; margin-left:15px;">
+                Chat on WhatsApp
+            </button>
+        </a>
+
+        <!-- Back Button -->
+        <a href="{% url 'course_list' %}">
+            <button style="padding:10px 20px; background:gray; color:white; border:none; border-radius:5px; margin-left:15px;">
+                Back to Courses
+            </button>
+        </a>
+
+    </div>
+
+</div>
+
+{% endblock %}

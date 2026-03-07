@@ -1,97 +1,75 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}Home - Technical Cloud Knowledge{% endblock %}
 
 {% block content %}
 
-<!-- Hero Section -->
-<div style="text-align:center; padding:60px 20px; background:linear-gradient(to right, #021736, #1b0242); color:white; border-radius:10px;">
+<!-- Hero Section with Background Image -->
+<div class="hero" style="position: relative; text-align: center; padding: 100px 20px; 
+                         background: url('{% static "images/technical_cloud_bg.jpg" %}') no-repeat center center; 
+                         background-size: cover; color: white; border-radius: 10px;">
     
-    <h1 style="font-size:40px; margin-bottom:20px;">
-        Best DevOps & Cloud Training Institute
-    </h1>
-
-    <p style="font-size:20px;">
-        Founder: Sanjay Dahiya
-    </p>
-
-    <p style="font-size:18px; margin-top:10px;">
-        Learn Linux, AWS, Azure, Docker, Kubernetes, Terraform & More
-    </p>
-
-    <br>
-
-    <a href="{% url 'course_list' %}"
-       style="padding:12px 25px; background:white; color:#021736; text-decoration:none; font-weight:bold; border-radius:5px;">
-        View All Courses
-    </a>
-
+    <!-- Overlay -->
+    <div style="position:absolute; top:0; left:0; width:100%; height:100%; 
+                background-color: rgba(0,0,0,0.5); border-radius: 10px;"></div>
+    
+    <!-- Hero Content -->
+    <div style="position:relative; z-index:1;">
+        <h1 style="font-size:48px; margin-bottom:20px;">Best DevOps & Cloud Training Institute</h1>
+        <p style="font-size:20px; margin-bottom:10px;">Founder: Sanjay Dahiya</p>
+        <p style="font-size:18px; margin-bottom:20px;">Learn Linux, AWS, Azure, Docker, Kubernetes & More</p>
+        <a href="{% url 'course_list' %}" style="padding:12px 25px; background:white; color:#021736; 
+                                                text-decoration:none; font-weight:bold; border-radius:5px;">
+            View All Courses
+        </a>
+    </div>
 </div>
-
 
 <!-- About Section -->
-<div style="margin-top:60px; text-align:center;">
-    
+<div style="margin-top:60px; text-align:center; padding:0 20px;">
     <h2>About Technical Cloud Knowledge</h2>
-
     <p style="max-width:800px; margin:20px auto; font-size:16px;">
-        Technical Cloud Knowledge PVT. LTD is a leading IT training institute
-        providing real-time practical training in DevOps, Cloud Computing,
-        and Infrastructure Automation.
+        Technical Cloud Knowledge PVT. LTD is a leading IT training institute providing real-time practical training
+        in DevOps, Cloud Computing, and Infrastructure Automation.
     </p>
-
     <p style="max-width:800px; margin:20px auto; font-size:16px;">
-        Our mission is to make students industry-ready with live projects,
-        interview preparation, and real production-level training.
+        Our mission is to make students industry-ready with live projects, interview preparation, and real production-level training.
     </p>
-
 </div>
 
-
 <!-- Highlights Section -->
-<div style="margin-top:60px; text-align:center;">
-    
+<div style="margin-top:60px; text-align:center; padding:0 20px;">
     <h2>Why Choose Us?</h2>
-
     <div style="display:flex; justify-content:center; flex-wrap:wrap; margin-top:30px; gap:30px;">
-        
-        <div style="width:250px; padding:20px; border:1px solid #ddd; border-radius:10px;">
+        <div style="width:250px; padding:20px; border-radius:10px; background-color: rgba(255,255,255,0.85); box-shadow:0 4px 10px rgba(0,0,0,0.2); color:#021736;">
             <h4>Live Projects</h4>
             <p>Work on real-time DevOps & Cloud projects.</p>
         </div>
-
-        <div style="width:250px; padding:20px; border:1px solid #ddd; border-radius:10px;">
+        <div style="width:250px; padding:20px; border-radius:10px; background-color: rgba(255,255,255,0.85); box-shadow:0 4px 10px rgba(0,0,0,0.2); color:#021736;">
             <h4>Interview Preparation</h4>
             <p>Top interview questions & resume guidance.</p>
         </div>
-
-        <div style="width:250px; padding:20px; border:1px solid #ddd; border-radius:10px;">
+        <div style="width:250px; padding:20px; border-radius:10px; background-color: rgba(255,255,255,0.85); box-shadow:0 4px 10px rgba(0,0,0,0.2); color:#021736;">
             <h4>Expert Trainers</h4>
             <p>Training by industry experts with real experience.</p>
         </div>
-
     </div>
-
 </div>
-
 
 <!-- Contact Section -->
 <div style="margin-top:60px; padding:40px; background:#f8f9fa; border-radius:10px; text-align:center;">
-    
     <h2>Contact Information</h2>
-
     <p><strong>Founder:</strong> Sanjay Dahiya</p>
     <p><strong>Phone:</strong> +91 8817442344</p>
     <p><strong>Email:</strong> sanjay.dahiya332@gmail.com</p>
 
     <br>
-
     <a href="https://wa.me/918817442344?text=Hello%20I%20am%20interested%20in%20your%20courses"
        target="_blank"
-       style="padding:10px 20px; background:#08da55; color:white; text-decoration:none; border-radius:5px;">
+       style="padding:10px 20px; background:#25D366; color:white; text-decoration:none; border-radius:5px;">
         Chat on WhatsApp
     </a>
-
 </div>
 
 {% endblock %}

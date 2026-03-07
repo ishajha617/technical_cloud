@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Courses - Technical Cloud Knowledge{% endblock %}
+
+{% block content %}
+
+<!-- Courses Hero Section -->
+<div style="text-align:center; padding:60px 20px; 
+            background: url('{% static "images/technical_cloud_bg.jpg" %}') no-repeat center center;
+            background-size: cover;
+            color: white;
+            border-radius: 10px;
+            position: relative;">
+
+    <!-- Overlay -->
+    <div style="position:absolute; top:0; left:0; width:100%; height:100%; background-color: rgba(0,0,0,0.5); border-radius:10px;"></div>
+
+    <div style="position:relative; z-index:1;">
+        <h1 style="font-size:40px; margin-bottom:20px;">Our Courses</h1>
+        <p style="font-size:18px;">Explore all our DevOps, Cloud, and AI Courses</p>
+    </div>
+</div>
+
+<!-- Courses List Section -->
+<div class="container my-5">
+    <div class="row">
+        {% for course in courses %}
+        <div class="col-md-4 mb-4">
+            <div style="background: rgba(255,255,255,0.85); padding:20px; border-radius:10px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+                <h4>{{ course.name }}</h4>
+                <p>{{ course.description|truncatewords:25 }}</p>
+
+                <!-- WhatsApp Button -->
+                <a href="https://wa.me/918817442344?text=I%20am%20interested%20in%20{{ course.name }}"
+                   target="_blank"
+                   style="display:inline-block; padding:8px 12px; margin:5px 0; background:#25D366; color:white; text-decoration:none; border-radius:5px;">
+                    WhatsApp
+                </a>
+
+                <!-- SMS Button -->
+                <a href="sms:+918817442344?body=I am interested in {{ course.name }}"
+                   style="display:inline-block; padding:8px 12px; margin:5px 0; background:#007bff; color:white; text-decoration:none; border-radius:5px;">
+                    Text
+                </a>
+
+                <!-- Enroll Button -->
+                <a href="#"
+                   style="display:inline-block; padding:8px 12px; margin:5px 0; background:#f0ad4e; color:white; text-decoration:none; border-radius:5px;">
+                    Enroll
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
